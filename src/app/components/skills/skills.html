@@ -1,1 +1,48 @@
-<p>skills works!</p>
+<section id="skills" class="skills-section py-5">
+  <div class="container">
+    <div class="text-center mb-5">
+      <h2 class="section-title">Mis Habilidades</h2>
+      <p class="section-subtitle">Tecnologías y herramientas que domino</p>
+    </div>
+    
+    <div class="skills-grid">
+      <div class="skill-category" *ngFor="let category of skillCategories">
+        <div class="category-header">
+          <h3 class="category-title">{{ category.name }}</h3>
+          <div class="category-icon">
+            <i [class]="category.icon"></i>
+          </div>
+        </div>
+        
+        <div class="skills-list">
+          <div class="skill-item" *ngFor="let skill of category.skills">
+            <div class="skill-info">
+              <div class="skill-header">
+                <span class="skill-name">{{ skill.name }}</span>
+                <span class="skill-percentage">{{ skill.level }}%</span>
+              </div>
+              <div class="skill-bar">
+                <div class="skill-progress" [style.width.%]="skill.level"></div>
+              </div>
+            </div>
+            <div class="skill-icon">
+              <i [class]="skill.icon"></i>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    
+    <div class="skills-tools mt-5">
+      <h3 class="tools-title text-center mb-4">Herramientas y Plataformas</h3>
+      <div class="tools-grid">
+        <div class="tool-item" *ngFor="let tool of tools">
+          <div class="tool-icon">
+            <i [class]="tool.icon"></i>
+          </div>
+          <span class="tool-name">{{ tool.name }}</span>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>

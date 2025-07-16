@@ -1,1 +1,75 @@
-<p>footer works!</p>
+<footer class="footer">
+  <div class="footer-content">
+    <div class="container">
+      <div class="footer-top">
+        <div class="footer-brand">
+          <h3 class="brand-name">Rodrigo</h3>
+          <p class="brand-description">
+            Desarrollador Full Stack apasionado por crear soluciones innovadoras 
+            y experiencias digitales excepcionales.
+          </p>
+        </div>
+        
+        <div class="footer-links">
+          <div class="link-group">
+            <h4 class="link-title">Navegación</h4>
+            <ul class="link-list">
+              <li><a href="#home" (click)="scrollToSection('home')">Inicio</a></li>
+              <li><a href="#about" (click)="scrollToSection('about')">Acerca de</a></li>
+              <li><a href="#skills" (click)="scrollToSection('skills')">Habilidades</a></li>
+              <li><a href="#experience" (click)="scrollToSection('experience')">Experiencia</a></li>
+            </ul>
+          </div>
+          
+          <div class="link-group">
+            <h4 class="link-title">Servicios</h4>
+            <ul class="link-list">
+              <li><a href="#projects" (click)="scrollToSection('projects')">Proyectos</a></li>
+              <li><a href="#contact" (click)="scrollToSection('contact')">Contacto</a></li>
+              <li><a href="#" (click)="downloadCV()">Descargar CV</a></li>
+            </ul>
+          </div>
+          
+          <div class="link-group">
+            <h4 class="link-title">Contacto</h4>
+            <ul class="contact-list">
+              <li>
+                <i class="fas fa-envelope"></i>
+                <span>rodrigo.developer&#64;email.com</span>
+              </li>
+              <li>
+                <i class="fas fa-phone"></i>
+                <span>+52 123 456 7890</span>
+              </li>
+              <li>
+                <i class="fas fa-map-marker-alt"></i>
+                <span>Ciudad de México, MX</span>
+              </li>
+            </ul>
+          </div>
+        </div>
+      </div>
+      
+      <div class="footer-bottom">
+        <div class="footer-social">
+          <a href="#" class="social-link" target="_blank" title="LinkedIn">
+            <i class="fab fa-linkedin-in"></i>
+          </a>
+          <a href="#" class="social-link" target="_blank" title="GitHub">
+            <i class="fab fa-github"></i>
+          </a>
+          <a href="#" class="social-link" target="_blank" title="Twitter">
+            <i class="fab fa-twitter"></i>
+          </a>
+          <a href="#" class="social-link" target="_blank" title="Instagram">
+            <i class="fab fa-instagram"></i>
+          </a>
+        </div>
+        
+        <div class="footer-copyright">
+          <p>&copy; {{ currentYear }} Rodrigo - Desarrollador Full Stack. Todos los derechos reservados.</p>
+        </div>
+      </div>
+    </div>
+  </div>
+</footer>

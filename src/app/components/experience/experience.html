@@ -1,1 +1,66 @@
-<p>experience works!</p>
+<section id="experience" class="experience-section py-5">
+  <div class="container">
+    <div class="text-center mb-5">
+      <h2 class="section-title">Experiencia Profesional</h2>
+      <p class="section-subtitle">Mi trayectoria en el desarrollo de software</p>
+    </div>
+    
+    <div class="timeline">
+      <div class="timeline-item" *ngFor="let experience of experiences; let i = index" 
+           [class.timeline-item-left]="i % 2 === 0" 
+           [class.timeline-item-right]="i % 2 === 1">
+        
+        <div class="timeline-content">
+          <div class="experience-card">
+            <div class="card-header">
+              <div class="company-logo">
+                <i [class]="experience.icon"></i>
+              </div>
+              <div class="job-info">
+                <h3 class="job-title">{{ experience.position }}</h3>
+                <h4 class="company-name">{{ experience.company }}</h4>
+                <div class="job-details">
+                  <span class="job-period">
+                    <i class="fas fa-calendar-alt"></i>
+                    {{ experience.period }}
+                  </span>
+                  <span class="job-location">
+                    <i class="fas fa-map-marker-alt"></i>
+                    {{ experience.location }}
+                  </span>
+                </div>
+              </div>
+            </div>
+            
+            <div class="card-body">
+              <p class="job-description">{{ experience.description }}</p>
+              
+              <div class="achievements">
+                <h5 class="achievements-title">Logros principales:</h5>
+                <ul class="achievements-list">
+                  <li *ngFor="let achievement of experience.achievements">
+                    <i class="fas fa-check-circle"></i>
+                    {{ achievement }}
+                  </li>
+                </ul>
+              </div>
+              
+              <div class="technologies">
+                <h5 class="tech-title">Tecnologías utilizadas:</h5>
+                <div class="tech-tags">
+                  <span class="tech-tag" *ngFor="let tech of experience.technologies">
+                    {{ tech }}
+                  </span>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        
+        <div class="timeline-marker">
+          <div class="marker-dot"></div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>

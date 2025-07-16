@@ -1,1 +1,109 @@
-<p>projects works!</p>
+<section id="projects" class="projects-section py-5">
+  <div class="container">
+    <div class="text-center mb-5">
+      <h2 class="section-title">Mis Proyectos</h2>
+      <p class="section-subtitle">Algunos de mis trabajos más destacados</p>
+    </div>
+    
+    <div class="projects-filter">
+      <button 
+        class="filter-btn" 
+        [class.active]="activeFilter === 'all'"
+        (click)="filterProjects('all')">
+        Todos
+      </button>
+      <button 
+        class="filter-btn" 
+        [class.active]="activeFilter === 'web'"
+        (click)="filterProjects('web')">
+        Web Apps
+      </button>
+      <button 
+        class="filter-btn" 
+        [class.active]="activeFilter === 'mobile'"
+        (click)="filterProjects('mobile')">
+        Mobile
+      </button>
+      <button 
+        class="filter-btn" 
+        [class.active]="activeFilter === 'fullstack'"
+        (click)="filterProjects('fullstack')">
+        Full Stack
+      </button>
+    </div>
+    
+    <div class="projects-grid">
+      <div 
+        class="project-card" 
+        *ngFor="let project of filteredProjects"
+        [class.animate-fadeInUp]="true">
+        
+        <div class="project-image">
+          <img [src]="project.image" [alt]="project.title" />
+          <div class="project-overlay">
+            <div class="project-actions">
+              <button 
+                class="action-btn" 
+                (click)="viewProject(project)"
+                title="Ver proyecto">
+                <i class="fas fa-eye"></i>
+              </button>
+              <button 
+                class="action-btn" 
+                (click)="viewCode(project)"
+                title="Ver código">
+                <i class="fab fa-github"></i>
+              </button>
+            </div>
+          </div>
+        </div>
+        
+        <div class="project-content">
+          <div class="project-header">
+            <h3 class="project-title">{{ project.title }}</h3>
+            <span class="project-category">{{ project.category }}</span>
+          </div>
+          
+          <p class="project-description">{{ project.description }}</p>
+          
+          <div class="project-tech">
+            <span class="tech-tag" *ngFor="let tech of project.technologies">
+              {{ tech }}
+            </span>
+          </div>
+          
+          <div class="project-footer">
+            <div class="project-stats">
+              <span class="stat-item">
+                <i class="fas fa-star"></i>
+                {{ project.stars }}
+              </span>
+              <span class="stat-item">
+                <i class="fas fa-code-branch"></i>
+                {{ project.forks }}
+              </span>
+            </div>
+            
+            <div class="project-links">
+              <a 
+                [href]="project.liveUrl" 
+                target="_blank" 
+                class="link-btn"
+                *ngIf="project.liveUrl">
+                <i class="fas fa-external-link-alt"></i>
+                Demo
+              </a>
+              <a 
+                [href]="project.githubUrl" 
+                target="_blank" 
+                class="link-btn">
+                <i class="fab fa-github"></i>
+                GitHub
+              </a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>

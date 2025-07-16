@@ -1,1 +1,64 @@
-<p>about works!</p>
+<section id="about" class="about-section py-5">
+  <div class="container">
+    <div class="row align-items-center">
+      <div class="col-lg-6 mb-4 mb-lg-0">
+        <div class="about-image animate-fadeInLeft">
+          <div class="image-container">
+            <img src="assets/images/profile.jpg" alt="Rodrigo - Desarrollador" class="profile-image">
+            <div class="image-overlay">
+              <div class="overlay-content">
+                <i class="fas fa-code"></i>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      
+      <div class="col-lg-6">
+        <div class="about-content animate-fadeInRight">
+          <h2 class="section-title">Acerca de Mí</h2>
+          <p class="section-subtitle">Desarrollador Full Stack apasionado por crear soluciones innovadoras</p>
+          
+          <div class="about-text">
+            <p>
+              ¡Hola! Soy Rodrigo, un desarrollador Full Stack con experiencia en tecnologías modernas 
+              como Angular, Node.js, Python y más. Me apasiona crear aplicaciones web que no solo 
+              funcionen bien, sino que también brinden una experiencia de usuario excepcional.
+            </p>
+            
+            <p>
+              Mi enfoque se basa en escribir código limpio, mantenible y escalable. Siempre estoy 
+              buscando aprender nuevas tecnologías y mejorar mis habilidades para ofrecer las 
+              mejores soluciones a los desafíos tecnológicos.
+            </p>
+          </div>
+          
+          <div class="about-stats">
+            <div class="stat-item">
+              <h3 class="stat-number">3+</h3>
+              <p class="stat-label">Años de Experiencia</p>
+            </div>
+            <div class="stat-item">
+              <h3 class="stat-number">15+</h3>
+              <p class="stat-label">Proyectos Completados</p>
+            </div>
+            <div class="stat-item">
+              <h3 class="stat-number">10+</h3>
+              <p class="stat-label">Tecnologías Dominadas</p>
+            </div>
+          </div>
+          
+          <div class="about-actions">
+            <a href="#contact" class="btn btn-primary me-3" (click)="scrollToContact()">
+              Contáctame
+            </a>
+            <button class="btn btn-secondary" (click)="downloadCV()">
+              <i class="fas fa-download me-2"></i>
+              Descargar CV
+            </button>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>

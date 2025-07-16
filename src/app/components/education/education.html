@@ -1,1 +1,76 @@
-<p>education works!</p>
+<section id="education" class="education-section py-5">
+  <div class="container">
+    <div class="text-center mb-5">
+      <h2 class="section-title">Educación</h2>
+      <p class="section-subtitle">Mi formación académica y certificaciones</p>
+    </div>
+    
+    <div class="education-grid">
+      <div class="education-card" *ngFor="let education of educationList">
+        <div class="card-icon">
+          <i [class]="education.icon"></i>
+        </div>
+        
+        <div class="card-content">
+          <h3 class="degree-title">{{ education.degree }}</h3>
+          <h4 class="institution-name">{{ education.institution }}</h4>
+          <div class="education-details">
+            <span class="education-period">
+              <i class="fas fa-calendar-alt"></i>
+              {{ education.period }}
+            </span>
+            <span class="education-location">
+              <i class="fas fa-map-marker-alt"></i>
+              {{ education.location }}
+            </span>
+          </div>
+          
+          <p class="education-description">{{ education.description }}</p>
+          
+          <div class="education-highlights" *ngIf="education.highlights && education.highlights.length > 0">
+            <h5>Logros destacados:</h5>
+            <ul>
+              <li *ngFor="let highlight of education.highlights">
+                <i class="fas fa-star"></i>
+                {{ highlight }}
+              </li>
+            </ul>
+          </div>
+          
+          <div class="education-skills" *ngIf="education.skills && education.skills.length > 0">
+            <h5>Habilidades adquiridas:</h5>
+            <div class="skills-tags">
+              <span class="skill-tag" *ngFor="let skill of education.skills">
+                {{ skill }}
+              </span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    
+    <div class="certifications-section mt-5">
+      <h3 class="certifications-title text-center mb-4">Certificaciones</h3>
+      <div class="certifications-grid">
+        <div class="certification-card" *ngFor="let cert of certifications">
+          <div class="cert-badge">
+            <i [class]="cert.icon"></i>
+          </div>
+          <div class="cert-content">
+            <h4 class="cert-title">{{ cert.title }}</h4>
+            <p class="cert-issuer">{{ cert.issuer }}</p>
+            <p class="cert-date">{{ cert.date }}</p>
+            <a 
+              [href]="cert.url" 
+              target="_blank" 
+              class="cert-link"
+              *ngIf="cert.url">
+              <i class="fas fa-external-link-alt"></i>
+              Ver certificado
+            </a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>

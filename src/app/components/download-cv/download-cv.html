@@ -1,1 +1,50 @@
-<p>download-cv works!</p>
+<section class="download-cv-section">
+  <div class="container">
+    <div class="cv-card">
+      <div class="cv-icon">
+        <i class="fas fa-file-download"></i>
+      </div>
+      
+      <div class="cv-content">
+        <h3 class="cv-title">Descarga mi CV</h3>
+        <p class="cv-description">
+          Obtén una versión completa de mi experiencia profesional, 
+          habilidades y logros en formato PDF.
+        </p>
+        
+        <div class="cv-stats">
+          <div class="stat-item">
+            <i class="fas fa-briefcase"></i>
+            <span>3+ años experiencia</span>
+          </div>
+          <div class="stat-item">
+            <i class="fas fa-code"></i>
+            <span>10+ tecnologías</span>
+          </div>
+          <div class="stat-item">
+            <i class="fas fa-project-diagram"></i>
+            <span>15+ proyectos</span>
+          </div>
+        </div>
+        
+        <div class="cv-actions">
+          <button class="btn btn-primary btn-lg" (click)="downloadCV()">
+            <i class="fas fa-download"></i>
+            Descargar CV
+          </button>
+          <button class="btn btn-secondary btn-lg" (click)="previewCV()">
+            <i class="fas fa-eye"></i>
+            Vista previa
+          </button>
+        </div>
+        
+        <div class="cv-info">
+          <p class="info-text">
+            <i class="fas fa-info-circle"></i>
+            Actualizado: {{ lastUpdated }}
+          </p>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
