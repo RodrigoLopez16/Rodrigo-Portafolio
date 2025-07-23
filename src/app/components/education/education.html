@@ -27,15 +27,6 @@
           
           <p class="education-description">{{ education.description }}</p>
           
-          <div class="education-highlights" *ngIf="education.highlights && education.highlights.length > 0">
-            <h5>Logros destacados:</h5>
-            <ul>
-              <li *ngFor="let highlight of education.highlights">
-                <i class="fas fa-star"></i>
-                {{ highlight }}
-              </li>
-            </ul>
-          </div>
           
           <div class="education-skills" *ngIf="education.skills && education.skills.length > 0">
             <h5>Habilidades adquiridas:</h5>
@@ -44,30 +35,6 @@
                 {{ skill }}
               </span>
             </div>
-          </div>
-        </div>
-      </div>
-    </div>
-    
-    <div class="certifications-section mt-5">
-      <h3 class="certifications-title text-center mb-4">Certificaciones</h3>
-      <div class="certifications-grid">
-        <div class="certification-card" *ngFor="let cert of certifications">
-          <div class="cert-badge">
-            <i [class]="cert.icon"></i>
-          </div>
-          <div class="cert-content">
-            <h4 class="cert-title">{{ cert.title }}</h4>
-            <p class="cert-issuer">{{ cert.issuer }}</p>
-            <p class="cert-date">{{ cert.date }}</p>
-            <a 
-              [href]="cert.url" 
-              target="_blank" 
-              class="cert-link"
-              *ngIf="cert.url">
-              <i class="fas fa-external-link-alt"></i>
-              Ver certificado
-            </a>
           </div>
         </div>
       </div>

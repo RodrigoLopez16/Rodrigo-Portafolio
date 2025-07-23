@@ -7,13 +7,14 @@ import { Component } from '@angular/core';
   styleUrl: './download-cv.scss'
 })
 export class DownloadCv {
-  lastUpdated = 'Enero 2024';
+  lastUpdated = 'Julio 2025';
+  showPreviewModal = false;
   
   downloadCV() {
     // Crear elemento de descarga
     const link = document.createElement('a');
-    link.href = 'assets/documents/cv-rodrigo-desarrollador.pdf';
-    link.download = 'CV-Rodrigo-Desarrollador-FullStack.pdf';
+    link.href = 'assets/documents/RodrigoRetanaCV.pdf';
+    link.download = 'RodrigoRetanaCV.pdf';
     document.body.appendChild(link);
     link.click();
     document.body.removeChild(link);
@@ -23,8 +24,8 @@ export class DownloadCv {
   }
   
   previewCV() {
-    // Abrir CV en nueva ventana para vista previa
-    window.open('assets/documents/cv-rodrigo-desarrollador.pdf', '_blank');
+    // Abrir en nueva ventana
+    window.open('assets/documents/RodrigoRetanaCV.pdf', '_blank');
   }
   
   private showDownloadMessage() {

@@ -22,8 +22,8 @@ export class About {
     // Aquí implementarías la lógica para descargar el CV
     // Por ejemplo, abrir un enlace a un archivo PDF
     const link = document.createElement('a');
-    link.href = 'assets/documents/cv-rodrigo.pdf';
-    link.download = 'CV-Rodrigo-Desarrollador.pdf';
+    link.href = 'assets/documents/RodrigoRetanaCV.pdf';
+    link.download = 'RodrigoRetanaCV.pdf';
     link.click();
   }
 }

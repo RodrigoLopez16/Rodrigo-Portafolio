@@ -53,6 +53,7 @@
   box-shadow: var(--shadow-md);
   border: 1px solid var(--border-light);
   transition: var(--transition-medium);
+  text-align: center;
 }
 
 .experience-card:hover {
@@ -63,6 +64,7 @@
 .card-header {
   display: flex;
   align-items: center;
+  justify-content: center;
   gap: 1.5rem;
   margin-bottom: 1.5rem;
   padding-bottom: 1rem;
@@ -102,10 +104,13 @@
 
 .job-details {
   display: flex;
+  align-items: center;
   flex-wrap: wrap;
   gap: 1rem;
   font-size: 0.9rem;
   color: var(--text-muted);
+  text-align: center;
+  justify-content: center;
 }
 
 .job-period,
@@ -163,12 +168,14 @@
   font-weight: 600;
   color: var(--text-primary);
   margin-bottom: 1rem;
+  text-align: center;
 }
 
 .tech-tags {
   display: flex;
   flex-wrap: wrap;
   gap: 0.5rem;
+  justify-content: center;
 }
 
 .tech-tag {

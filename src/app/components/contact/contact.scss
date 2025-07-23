@@ -67,6 +67,7 @@
   color: var(--text-primary);
   background: var(--bg-primary);
   transition: var(--transition-fast);
+  font-family: inherit;
 }
 
 .form-control:focus {
@@ -77,6 +78,7 @@
 
 .form-control::placeholder {
   color: var(--text-muted);
+  font-family: inherit;
 }
 
 .form-control.is-invalid {
@@ -113,10 +115,11 @@
 .contact-info {
   background: var(--bg-card);
   border-radius: 15px;
-  padding: 2.5rem;
+  padding: 2rem;
   box-shadow: var(--shadow-md);
   border: 1px solid var(--border-light);
   height: fit-content;
+  min-width: 390px;
 }
 
 .contact-info-title {
@@ -130,9 +133,9 @@
 .contact-item {
   display: flex;
   align-items: flex-start;
-  gap: 1rem;
-  margin-bottom: 2rem;
-  padding: 1rem;
+  gap: 1.5rem;
+  margin-bottom: 2.5rem;
+  padding: 1.5rem 2rem;
   background: var(--bg-primary);
   border-radius: 10px;
   transition: var(--transition-fast);
@@ -153,6 +156,11 @@
   font-size: 1.2rem;
   color: var(--text-primary);
   flex-shrink: 0;
+}
+
+.contact-details {
+  flex: 1;
+  min-width: 0;
 }
 
 .contact-details h4 {

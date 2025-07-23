@@ -5,37 +5,10 @@
       <p class="section-subtitle">Algunos de mis trabajos más destacados</p>
     </div>
     
-    <div class="projects-filter">
-      <button 
-        class="filter-btn" 
-        [class.active]="activeFilter === 'all'"
-        (click)="filterProjects('all')">
-        Todos
-      </button>
-      <button 
-        class="filter-btn" 
-        [class.active]="activeFilter === 'web'"
-        (click)="filterProjects('web')">
-        Web Apps
-      </button>
-      <button 
-        class="filter-btn" 
-        [class.active]="activeFilter === 'mobile'"
-        (click)="filterProjects('mobile')">
-        Mobile
-      </button>
-      <button 
-        class="filter-btn" 
-        [class.active]="activeFilter === 'fullstack'"
-        (click)="filterProjects('fullstack')">
-        Full Stack
-      </button>
-    </div>
-    
     <div class="projects-grid">
       <div 
         class="project-card" 
-        *ngFor="let project of filteredProjects"
+        *ngFor="let project of projects"
         [class.animate-fadeInUp]="true">
         
         <div class="project-image">
@@ -61,7 +34,6 @@
         <div class="project-content">
           <div class="project-header">
             <h3 class="project-title">{{ project.title }}</h3>
-            <span class="project-category">{{ project.category }}</span>
           </div>
           
           <p class="project-description">{{ project.description }}</p>
@@ -73,26 +45,7 @@
           </div>
           
           <div class="project-footer">
-            <div class="project-stats">
-              <span class="stat-item">
-                <i class="fas fa-star"></i>
-                {{ project.stars }}
-              </span>
-              <span class="stat-item">
-                <i class="fas fa-code-branch"></i>
-                {{ project.forks }}
-              </span>
-            </div>
-            
             <div class="project-links">
-              <a 
-                [href]="project.liveUrl" 
-                target="_blank" 
-                class="link-btn"
-                *ngIf="project.liveUrl">
-                <i class="fas fa-external-link-alt"></i>
-                Demo
-              </a>
               <a 
                 [href]="project.githubUrl" 
                 target="_blank" 
