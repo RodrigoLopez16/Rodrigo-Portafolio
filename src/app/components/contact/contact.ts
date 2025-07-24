@@ -25,21 +25,17 @@ export class Contact {
     if (this.contactForm.valid) {
       this.isSubmitting = true;
       
-      // Simular envío de formulario
       setTimeout(() => {
         console.log('Formulario enviado:', this.contactForm.value);
         
-        // Aquí implementarías la lógica para enviar el formulario
-        // Por ejemplo, hacer una petición HTTP a tu backend
+        
         
         this.isSubmitting = false;
         this.contactForm.reset();
         
-        // Mostrar mensaje de éxito
         alert('¡Mensaje enviado correctamente! Te responderé pronto.');
       }, 2000);
     } else {
-      // Marcar todos los campos como tocados para mostrar los errores
       this.contactForm.markAllAsTouched();
     }
   }
