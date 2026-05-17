@@ -9,6 +9,16 @@ import { CommonModule } from '@angular/common';
 })
 export class Experience {
   experiences = [
+    
+    {
+      position: 'Jr Appeals Collector',
+      company: 'Auxis',
+      period: 'February 2026 - Present',
+      location: 'Heredia - Costa Rica - Remote',
+      icon: 'fas fa-chart-line',
+      description: 'Assisting in the appeals process for collection accounts, ensuring compliance with regulations and improving recovery rates.',
+      technologies: ['Microsoft Teams', 'Meditech', 'Availity', 'Artiva']
+    },
     {
       position: 'Bilingual Voice Agent',
       company: 'TransUnion',
@@ -36,5 +46,6 @@ export class Experience {
       description: 'First working, helping with the processing of medical bills for patients in the United States, for hospitals such as Spectrum Health, Southern Ohio Medical Center, and Baptist Hospital.',
       technologies: ['EPIC', 'Microsoft Teams', 'Meditech', 'Availity']
     }
+    
   ];
 }
