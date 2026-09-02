@@ -7,13 +7,13 @@ import { Component } from '@angular/core';
   styleUrl: './download-cv.scss'
 })
 export class DownloadCv {
-  lastUpdated = 'February 2026';
+  lastUpdated = 'September 2026';
   showPreviewModal = false;
   
   downloadCV() {
     const link = document.createElement('a');
-    link.href = 'assets/documents/RodrigoRetana_CV(1).pdf';
-    link.download = 'RodrigoRetana_CV(1).pdf';
+    link.href = 'assets/documents/Rodrigo_Retana_Resume.pdf';
+    link.download = 'Rodrigo_Retana_Resume.pdf';
     document.body.appendChild(link);
     link.click();
     document.body.removeChild(link);
@@ -22,7 +22,7 @@ export class DownloadCv {
   }
   
   previewCV() {
-    window.open('assets/documents/RodrigoRetana_CV(1).pdf', '_blank');
+    window.open('assets/documents/Rodrigo_Retana_Resume.pdf', '_blank');
   }
   
   private showDownloadMessage() {

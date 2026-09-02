@@ -19,11 +19,10 @@ export class About {
   }
 
   downloadCV() {
-    // Aquí implementarías la lógica para descargar el CV
-    // Por ejemplo, abrir un enlace a un archivo PDF
+   
     const link = document.createElement('a');
-    link.href = 'assets/documents/RodrigoRetanaSDCV.pdf';
-    link.download = 'RodrigoRetanaSDCV.pdf';
+    link.href = 'assets/documents/Rodrigo_Retana_Resume';
+    link.download = 'Rodrigo_Retana_Resume.pdf';
     link.click();
   }
 }

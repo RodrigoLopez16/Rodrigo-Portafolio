@@ -17,7 +17,7 @@ export class Projects {
       description: 'Platform for managing intermittent fasting, with progress tracking, recipes, and weight',
       image: 'https://images.unsplash.com/photo-1490645935967-10de6ba17061?w=400&h=200&fit=crop',
       technologies: ['HTML', 'CSS', 'MongoDB'],
-      githubUrl: 'https://github.com/RodrigoLopez16/Primera-iteraci-n'
+      githubUrl: 'https://github.com/RodrigoLopez16/Primera-iteraci-n',
     },
     {
       id: 2,
@@ -26,7 +26,17 @@ export class Projects {
       image: 'https://images.unsplash.com/photo-1554224155-6726b3ff858f?w=400&h=200&fit=crop',
       technologies: ['Java', 'Spring Boot', 'Angular', 'MariaDB'],
       githubUrl: 'https://github.com/CodingLab-TribuTico'
+    },
+    {
+      id: 3,
+      title: 'Web application - Chupis Ortopédica',
+      description: 'Web application for  Chupis Ortopédica, a company that sells orthopedic products in Costa Rica.',
+      image: 'https://chupisortopedica.com/wp-content/uploads/2024/04/Logo-ChupisOrtopedica.png',
+      technologies: ['Java', 'Spring Boot', 'Angular'],
+      githubUrl: 'https://github.com/RodrigoRetana/Chupis-ortopedica-web'
+
     }
+  
   ];  
   
   
